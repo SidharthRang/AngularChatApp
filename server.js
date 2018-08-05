@@ -27,6 +27,10 @@ mongoose.connect(mongodb_url, {
 
 app.use(express.static(__dirname + '/dist/'));
 
+app.get('/', (req, res) => {
+    res.render('index.html');
+})
+
 app.post('/registerUser', (req, res) => {
     var user = req.body;
     var newUser = new Users(user);
