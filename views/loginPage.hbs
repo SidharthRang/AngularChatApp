@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <a href="/register">Not a member?Register Here</a>
+    <form id="loginForm" action="/loginUser" method="POST">
+        <label for="userName">Username</label>
+        <input id="userName" name="userName" type="text" placeholder="Enter Username" />
+        <br>
+        <br>
+        <label for="password">Password</label>
+        <input id="password" name="password" type="text" placeholder="Enter Password" />
+        <br>
+        <br>
+        <input type="submit" value="Login" />
+    </form>
+    <script>
+        var status = "{{status}}";
+        if (status == "failure") {
+            alert("Invalid Username/Password");
+        }
+    </script>
+</body>
+
+</html>

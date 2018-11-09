@@ -5,20 +5,19 @@ import { HttpClientModule } from '@angular/common/http'
 import { AppRoutingModule } from './app.routing'
 
 import { AppComponent } from './app.component';
-import { LoginComponent } from './components/login/login.component';
-import { RegisterComponent } from './components/register/register.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
 import { UserService } from './services/user.service';
+import { ChatComponent } from './components/chat/chat.component';
+import { SocketService } from './services/socket.service';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    RegisterComponent,
     DashboardComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    ChatComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +25,7 @@ import { UserService } from './services/user.service';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [UserService],
+  providers: [UserService, SocketService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

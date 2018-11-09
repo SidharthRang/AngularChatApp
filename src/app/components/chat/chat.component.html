@@ -1,0 +1,14 @@
+<div class="chat-view">
+  <h2>{{chatProfile}}</h2>
+  <ul>
+    <li *ngFor="let message of messages">
+      <div class="card-panel">
+        <span class="blue-text text-darken-2">{{message}}</span>
+      </div>
+    </li>
+  </ul>
+  <div class="bottom span12">
+    <input type="text" [style.width.%]="90" placeholder="Type Message" [(ngModel)]="newMessage" />
+    <button id="sendMessage" class="btn blue" (click)="sendMessage()"><i class="material-icons">send</i></button>
+  </div>
+</div>

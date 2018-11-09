@@ -1,3 +1,6 @@
-<p>
-  dashboard works!
-</p>
+<h2>A Basic Chat Application</h2>
+<ul class="collection">
+  <li class="collection-item" *ngFor="let contact of contacts">
+    <a routerLink="/ChatRoom/{{contact}}">{{contact}}</a>
+  </li>
+</ul>

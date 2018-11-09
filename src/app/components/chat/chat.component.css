@@ -1,0 +1,9 @@
+.chat-view{
+    height: 100vh;
+    background-color:azure;
+}
+.bottom{
+    position: fixed;
+    bottom: 0%;
+    width: 100vw;
+}
